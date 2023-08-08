@@ -1,0 +1,27 @@
+<!-- Peoperty Bindinding -->
+<label style="color:rgb(200, 255, 0)">Peoperty Bindinding</label><br>
+<input type="text" [id] = "theID"><br><br>
+
+<!-- Interpolation --> 
+<label style="color:rgb(166, 0, 255)">Interpolation</label><br>
+<input type="text" id = {{theID}}><br><br>
+
+<!-- Two way binding (NgModel) -->
+<label style="color:rgb(255, 0, 162)">NgModel live input (Two way binding)</label><br>
+<input type="text" [(ngModel)]="txt1" (input)="yourFunction(txt1)"><br>
+{{txt1}}<br>
+
+<!-- template reference variable (use # live) -->
+<label style="color:rgb(0, 255, 13)"># live input (template reference)</label><br>
+<input type="text" #txt2 (input)="yourFunction(txt2.value)"><br>
+{{txt1}}<br>
+
+<!-- # no live with click function -->
+<label style="color:red">NgModel No live input</label><br>
+<input type="text" #txt3 ><br>
+<button (click)="onClick(txt3.value)">Click</button>
+{{txt3.value}}<br>
+
+<!-- Class Binding -->
+<p ngClass="myClass">Hello</p>
+
